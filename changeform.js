@@ -3,11 +3,11 @@
     var name = $('#edit-name');
     var pass = $('#edit-pass');
     var change = $('#edit-terms-of-use');
-    $("input[type='text']").prop("disabled", true);
-    $("input[type='password']").prop("disabled", true);
+    $("input[name='name']").prop("disabled", true);
+    $("input[name='pass']").prop("disabled", true);
     $('#edit-terms-of-use').click(function(e) {
-      $("input[type='text']").prop("disabled", false);
-      $("input[type='password']").prop("disabled", false);
+      $("input[name='name']").prop("disabled", false);
+      $("input[name='pass']").prop("disabled", false);
     });
   });
 })(jQuery);
