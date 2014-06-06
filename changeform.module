@@ -9,9 +9,9 @@
  * Implements hook_help().
  */
 function changeform_form_alter(&$form, &$form_state, $form_id) {
-  $path = drupal_get_path('module', 'changeform') . '/';
-  $form['#attached']['js'][] = $path . 'changeform.js';
-  if (($form_id =='user_register_form')||($form_id == 'user_login_block' )) {
+  if (($form_id =='user_register_form')||($form_id == 'user_login_block')) {
+    $path = drupal_get_path('module', 'changeform') . '/';
+    $form['#attached']['js'][] = $path . 'changeform.js';
     $form['terms_of_use'] = array(
       '#type' => 'checkbox',
       '#weight' => -50,
