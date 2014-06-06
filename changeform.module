@@ -8,43 +8,26 @@
  /**
  * Implements hook_help().
  */
-function changeform_form_user_login_block_alter(&$form, &$form_state, $form_id) {
+function changeform_form_alter(&$form, &$form_state, $form_id) {
   $path = drupal_get_path('module', 'changeform') . '/';
   $form['#attached']['js'][] = $path . 'changeform.js';
-  $form['terms_of_use'] = array(
-    '#type' => 'checkbox',
-    '#weight' => -50,
-    '#title' => t("I agree with the website's terms and conditions."),
-    '#description' => l(t('Terms and conditions >>'), 'https://lobbyform/termsnode'),
-    '#element_validate' => array('changeform_form_user_login_block_validate'), 
-  );
-}
-
-function changeform_form_user_register_form_alter(&$form, &$form_state, $form_id) {
-  $path = drupal_get_path('module', 'changeform') . '/';
-  $form['#attached']['js'][] = $path . 'changeform.js';
-  $form['terms_of_use'] = array(
-    '#type' => 'checkbox',
-    '#weight' => -50,
-    '#title' => t("I agree with the website's terms and conditions."),
-    '#description' => l(t('Terms and conditions >>'), 'https://lobbyform/termsnode'),
-    '#element_validate' => array('changeform_form_user_login_block_validate'), 
-  );
+  if (($form_id =='user_register_form')||($form_id == 'user_login_block' )) {
+    $form['terms_of_use'] = array(
+      '#type' => 'checkbox',
+      '#weight' => -50,
+      '#title' => t("I agree with the website's terms and conditions."),
+      '#description' => l(t('Terms and conditions >>'), 'https://lobbyform/termsnode'),
+      '#element_validate' => array('changeform_form_validate'), 
+    );
+  }
 }
 
 /** 
  * Validate function for changeform_form. 
  */
-function changeform_form_user_login_block_validate($form, &$form_state) {
+function changeform_form_validate($form, &$form_state) {
  $terms = $form_state['values']['terms_of_use'];
  if (!($terms)) {
    form_set_error('terms_of_use', t('You do not accept the agreement. Please read terms and conditions.'));
-  }
-  
-function changeform_form_user_register_form_validate($form, &$form_state) {
- $terms = $form_state['values']['terms_of_use'];
- if (!($terms)) {
-   form_set_error('terms_of_use', t('You do not accept the agreement. Please read terms and conditions.'));
-  }
-}
+ }
 }
