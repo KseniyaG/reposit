@@ -5,9 +5,11 @@
     var change = $('#edit-terms-of-use');
     $("input[name='name']").prop("disabled", true);
     $("input[name='pass']").prop("disabled", true);
+    $("input[name='mail']").prop("disabled", true);
     $('#edit-terms-of-use').click(function(e) {
       $("input[name='name']").prop("disabled", false);
       $("input[name='pass']").prop("disabled", false);
+      $("input[name='mail']").prop("disabled", false);
     });
   });
 })(jQuery);
