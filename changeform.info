@@ -1,0 +1,5 @@
+name = Change Userform
+description = "Add checkbox in Userform"
+core = 7.x
+version = 1.0
+package = UserForm
