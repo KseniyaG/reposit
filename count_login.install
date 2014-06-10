@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ * Installation file for Counter module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function count_login_schema() {
+  $schema['count_login_values'] = array(
+    'description' => 'Counter data.',
+    'fields' => array(
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'The name of the statistic.',
+      ),
+      'uid' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'The {users}.uid of the statistic user.',
+      ),
+      'value' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'The value of the statistic.',
+      ),
+    ),
+    'primary key' => array('name', 'uid'),
+  );
+  return $schema;
+}
