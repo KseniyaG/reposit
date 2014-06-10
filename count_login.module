@@ -9,14 +9,6 @@
  */
 function count_login_menu() {
   $items = array();
-  $items['admin/count_login'] = array(
-    'title' => 'Counter',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('count_login_admin_settings'),
-    'access arguments' => array('administer count login'),
-    'file' => 'count_login.admin.inc',
-    'type' => MENU_NORMAL_ITEM,
-  );
   return $items;
 }
 
@@ -26,9 +18,6 @@ function count_login_menu() {
 function count_login_get_stats($uid) {
   if (!is_numeric($uid)) {
     return;
-  }
-  if (count_login_cache_get($uid) !== FALSE) {
-    return count_login_cache_get($uid);
   }
   if (!variable_get('count_login_count_logins', TRUE)) {
     $data = 'n/a';
@@ -46,40 +35,6 @@ function count_login_get_stats($uid) {
   else {
     return 0;
   }
-  count_login_cache_set($uid, $data);
-  return count_login_cache_get($uid);
-}
-
-/**
- * Return data from the non-persistent Counter cache. 
- */
-function count_login_cache_get($uid) {
-  $count_login_cache = count_login_cache_set();
-  if (isset($count_login_cache[$uid])) {
-    return $count_login_cache[$uid];
-  }
-  else {
-    return FALSE;
-  }
-}
-
-/**
- * Store a value in the non-persistent Counter cache.
- */
-function count_login_cache_set($uid = 0, $data = NULL) {
-  static $count_login_cache = array();
-  if ($uid == -1) {
-    unset($count_login_cache);
-    return;
-  }
-  elseif ($uid > -1) {
-    unset($count_login_cache[$uid]);
-    return;
-  }
-  if ($data !== NULL) {
-    $count_login_cache[$uid] = $data;
-  }
-  return $count_login_cache;
 }
 
 /**
