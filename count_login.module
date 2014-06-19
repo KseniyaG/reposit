@@ -63,9 +63,7 @@ function count_login_table_data_page() {
  * Implements hook_user_login().
  */
 function count_login_user_login(&$edit, $account) {
-  if (variable_get('count_login_count_logins', TRUE)) {
     count_login_login_count_insert($account->uid);
-  }
 }
 
 /**
