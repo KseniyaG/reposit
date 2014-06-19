@@ -4,7 +4,7 @@
  * Contains base function for module.
  */
 
- /**
+/**
  * Implements hook_menu().
  */
 function count_login_menu() {
@@ -17,6 +17,9 @@ function count_login_menu() {
   return $items;
 }
 
+/**
+ * Used by sorting table.
+ */
 function cmp($a, $b) {
     if ($a == $b) {
         return 0;
@@ -24,6 +27,9 @@ function cmp($a, $b) {
     return ($a < $b) ? -1 : 1;
 }
 
+/**
+ * Generates a table to display.
+ */
 function count_login_table_data_page() {
   $header = array(t('username'), t('value'), t('date'));
   $rows = array();
@@ -52,21 +58,6 @@ function count_login_table_data_page() {
   uasort($rows, 'cmp');
   return theme('table', array('header' => $header, 'rows' => $rows));
 } 
-
-function count_login_isset($uid) {
-  $result = db_query("SELECT COUNT(*)
-    FROM {count_login_values}
-    WHERE uid = :uid",
-    array(
-      ':uid' => $uid,
-    ))
-    ->fetchField();
-  if ($result > 0) {
-    return TRUE;
-  }
-  return FALSE;
-}
-
  
 /**
  * Implements hook_user_login().
@@ -78,27 +69,17 @@ function count_login_user_login(&$edit, $account) {
 }
 
 /**
- * Manage the login count of a given user.
+ * Insert entries to the database.
  */
 function count_login_login_count_insert($uid) {
    global $user;
-   if (count_login_isset($uid)){
-     $query = db_insert('count_login_values')
+   $query = db_insert('count_login_values')
      ->fields(array(
+       'username' => $user->name,
        'uid' => $uid,
        'date' => time(),
      ))
-     ->execute(); 
-   }
-   else {
-    $query = db_insert('count_login_values')
-      ->fields(array(
-        'username' => $user->name,
-        'uid' => $uid,
-        'date' => time(),
-      ))
-      ->execute();
-   }
+     ->execute();
  }  
  
 
