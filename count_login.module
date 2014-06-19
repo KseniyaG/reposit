@@ -18,16 +18,6 @@ function count_login_menu() {
 }
 
 /**
- * Used by sorting table.
- */
-function cmp($a, $b) {
-    if ($a == $b) {
-        return 0;
-    }
-    return ($a < $b) ? -1 : 1;
-}
-
-/**
  * Generates a table to display.
  */
 function count_login_table_data_page() {
@@ -55,7 +45,6 @@ function count_login_table_data_page() {
       'date' => date("F j, Y, g:i a", $value['date']),
     ); 
   }
-  uasort($rows, 'cmp');
   return theme('table', array('header' => $header, 'rows' => $rows));
 } 
  
