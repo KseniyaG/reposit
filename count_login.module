@@ -23,31 +23,44 @@ function count_login_menu() {
 }
 
 /**
+ * Insert entries from the database.
+ */
+function count_login_db_array(){
+  $table_array = array();
+  $query = db_select('count_login_values', 'n')
+  ->fields('n', array('username', 'date'))
+  ->execute();
+  while ($value = $query ->fetchAssoc()) {
+    $table_array[] = array(
+      'username' => $value['username'],
+      'date' => date("F j, Y, g:i a", $value['date']),
+    );
+   }
+   return $table_array;
+}
+
+/**
  * Generates a table to display.
  */
 function count_login_table_date_page() {
   $header = array(t('username'), t('date')); 
   $rows = array();
-  $query = db_select('count_login_values', 't')
-    ->fields('t', array('username', 'date'))
-    ->execute(); 
-  while ($value = $query->fetchAssoc()) {
+  $arr = count_login_db_array();
+  foreach ($arr as $value) {
     $rows[] = array(
       'username' => $value['username'],
-      'date' => date("F j, Y, g:i a", $value['date']),
+      'date' => $value['date'],
     );
-  }
-  return theme('table', array('header' => $header, 'rows' => $rows));
+ }
+ return theme('table', array('header' => $header, 'rows' => $rows));
 } 
 
 function count_login_table_values_page() {
   $header = array(t('username'), t('value'));
   $rows = array();
   $count = array();
-  $query = db_select('count_login_values', 'n')
-    ->fields('n', array('username', 'uid'))
-    ->execute(); 
-  while ($value = $query->fetchAssoc()) {
+  $arr = count_login_db_array();
+  foreach ($arr as $value) {
     if (isset($count[$value['username']]))  {
       $count[$value['username']]++;
     }
@@ -62,11 +75,12 @@ function count_login_table_values_page() {
    );
   return theme('table', array('header' => $header, 'rows' => $rows)); 
 } 
+
 /**
  * Implements hook_user_login().
  */
 function count_login_user_login(&$edit, $account) {
-    count_login_login_count_insert($account->uid);
+    count_login_login_count_insert($account -> uid);
 }
 
 /**
