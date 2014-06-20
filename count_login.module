@@ -33,7 +33,7 @@ function count_login_db_array(){
   while ($value = $query ->fetchAssoc()) {
     $table_array[] = array(
       'username' => $value['username'],
-      'date' => date("F j, Y, g:i a", $value['date']),
+      'date' => $value['date'],
     );
    }
    return $table_array;
@@ -49,7 +49,7 @@ function count_login_table_date_page() {
   foreach ($arr as $value) {
     $rows[] = array(
       'username' => $value['username'],
-      'date' => $value['date'],
+      'date' => date("F j, Y, g:i a", $value['date']),
     );
  }
  return theme('table', array('header' => $header, 'rows' => $rows));
