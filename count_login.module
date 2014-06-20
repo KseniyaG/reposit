@@ -9,9 +9,14 @@
  */
 function count_login_menu() {
   $items = array();
-  $items['count_login_table'] = array(
-    'title' => 'Table with data',
-    'page callback' => 'count_login_table_data_page',
+  $items['count_login_table_date'] = array(
+    'title' => 'Table with dates',
+    'page callback' => 'count_login_table_date_page',
+    'access arguments' => array('administer site configuration'),
+  );
+  $items['count_login_table_value'] = array(
+    'title' => 'Table with values',
+    'page callback' => 'count_login_table_values_page',
     'access arguments' => array('administer site configuration'),
   );
   return $items;
@@ -20,34 +25,43 @@ function count_login_menu() {
 /**
  * Generates a table to display.
  */
-function count_login_table_data_page() {
-  $header = array(t('username'), t('value'), t('date'));
+function count_login_table_date_page() {
+  $header = array(t('username'), t('date')); 
   $rows = array();
-  $counter = db_select('count_login_values', 't')
-    ->fields('t', array('uid'))
-    ->execute();
-  $count = array();  
-  while ($value = $counter->fetchAssoc()) {
-    if (isset($count[$value['uid']])) {
-      $count[$value['uid']]++;
-    }
-    else {
-      $count[$value['uid']] = 1;
-    }
-  }
   $query = db_select('count_login_values', 't')
-    ->fields('t', array('username', 'date', 'uid'))
-    ->execute();
+    ->fields('t', array('username', 'date'))
+    ->execute(); 
   while ($value = $query->fetchAssoc()) {
     $rows[] = array(
       'username' => $value['username'],
-      'value' => $count[$value['uid']],
       'date' => date("F j, Y, g:i a", $value['date']),
-    ); 
+    );
   }
   return theme('table', array('header' => $header, 'rows' => $rows));
 } 
- 
+
+function count_login_table_values_page() {
+  $header = array(t('username'), t('value'));
+  $rows = array();
+  $count = array();
+  $query = db_select('count_login_values', 'n')
+    ->fields('n', array('username', 'uid'))
+    ->execute(); 
+  while ($value = $query->fetchAssoc()) {
+    if (isset($count[$value['username']]))  {
+      $count[$value['username']]++;
+    }
+    else {
+      $count[$value['username']] = 1;
+    }
+   }
+   foreach ($count as $key => $value)
+   $rows[] = array(
+     'username' => $key,
+     'value' => $value,
+   );
+  return theme('table', array('header' => $header, 'rows' => $rows)); 
+} 
 /**
  * Implements hook_user_login().
  */
