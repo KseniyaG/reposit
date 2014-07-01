@@ -6,20 +6,20 @@
 header{
   position: absolute;
   top: 60px;
-  right: 55px;  
   display: block;
   float: right;
-  width: 678px;
+  width: 960px;
   height: 400px; 
 } 
 header ul.menu {
   display: inline-block;
+  float: right;
   list-style: none;
   padding:0;
   margin: 0;
 }
 header ul.menu li {
-  float: left;
+  float: right;
   list-style: none;
 }
 header ul.menu li a {
@@ -29,6 +29,11 @@ header ul.menu li a {
   color: #4a4a4a;
   text-decoration: none;
   padding: 5px 0 0 0;
+}
+#logo{
+  position: relative;
+  display: block;
+  float: left;
 }
 #search {
   float: right;
@@ -58,12 +63,6 @@ header ul.menu li a {
   height: 29px;
   cursor: pointer;
   background: url(dontexist.png);
-}
-#logo{
-  position: absolute;
-  top: 25px;
-  left: 173px;
-  float: left;
 }
 #slider {
   position:  relative;
