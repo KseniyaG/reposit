@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 header{
-  position: absolute;
+  position: relative;
   top: 60px;
   display: block;
   float: right;
@@ -65,7 +65,7 @@ header ul.menu li a {
   background: url(dontexist.png);
 }
 #slider {
-  position:  relative;
+  position: relative;
   top: 50px;
   left: 0;
   display: block;
