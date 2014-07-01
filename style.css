@@ -36,12 +36,12 @@ header ul.menu li a {
   height: 29px; 
 }
 #search input {
-	float: left;
-	border: none;
+  float: left;
+  border: none;
 }
 #search .input {
-	width: 188px;
-	height: 28px;
+  width: 188px;
+  height: 28px;
   font: normal 100% "Verdana", sans-serif;
   outline: none;
   padding: 0 37px 1px 15px;
@@ -49,15 +49,15 @@ header ul.menu li a {
 }
 #search .input:focus {
   color: #333;
-	background-color: #E8E8E8;
-	background-position: 0 -29px;	
+  background-color: #E8E8E8;
+  background-position: 0 -29px;	
 }
 #search .submit {
   margin-left: -37px;
-	width: 37px;
-	height: 29px;
-	cursor: pointer;
-	background: url(dontexist.png);
+  width: 37px;
+  height: 29px;
+  cursor: pointer;
+  background: url(dontexist.png);
 }
 #logo{
   position: absolute;
@@ -198,8 +198,10 @@ html, body {
   display: table; 
   width: 100%;
 }
-html>/**/body #page { height: 100%; }
+html>
+body #page { height: 100%; }
 *:first-child+html #page { height: auto; }
 .section { display: table-row; }
-html>/**/body .section-content { height: 100%; }
+html>
+body .section-content { height: 100%; }
 *:first-child+html body .section-content { height: auto; }
