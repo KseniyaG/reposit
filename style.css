@@ -9,7 +9,7 @@ header{
   right: 55px;  
   display: block;
   float: right;
-	width: 678px;
+  width: 678px;
   height: 400px; 
 } 
 header ul.menu {
@@ -32,8 +32,8 @@ header ul.menu li a {
 }
 #search {
   float: right;
-	width: 235px;
-	height: 29px; 
+  width: 235px;
+  height: 29px; 
 }
 #search input {
 	float: left;
