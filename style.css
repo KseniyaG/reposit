@@ -8,7 +8,7 @@ header{
   top: 10px; 
   display: block;
   float: right;
-	width: 960px;
+  width: 960px;
   height: 90px; 
 } 
 header ul.menu {
@@ -62,7 +62,7 @@ header ul.menu li a {
   width: 37px;
   height: 29px;
   cursor: pointer;
-	background: url(dontexist.png);
+  background: url(dontexist.png);
 }
 #content{
   position: relative;
