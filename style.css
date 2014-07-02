@@ -35,26 +35,26 @@ header ul.menu li a {
   display: block;
   float: left;
 }
- #block-search-form {
+#block-search-form {
   position:relative;
   right: -120px;
   float: right;
   width: 300px;
   height: 40px;
-  }
- #block-search-form  input[type="search"] {
-   -webkit-appearance: none; 
-   width: 200px; 
-   height: 40px;
-   border: none; 
-   outline: none; 
- }   
- #block-search-form  input[type="submit"] {
-   width: 40px; 
-   height: 40px; 
-   background: url(images/searchbutton.png) no-repeat 50% 50%; 
-   border: none;
-   color: transparent; 
+}
+#block-search-form  input[type="search"] {
+  -webkit-appearance: none; 
+  width: 200px; 
+  height: 40px;
+  border: none; 
+  outline: none; 
+}   
+#block-search-form  input[type="submit"] {
+  width: 40px; 
+  height: 40px; 
+  background: url(images/searchbutton.png) no-repeat 50% 50%; 
+  border: none;
+  color: transparent; 
 }
 #content{
   position: relative;
