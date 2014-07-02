@@ -35,34 +35,26 @@ header ul.menu li a {
   display: block;
   float: left;
 }
-#search {
+ #block-search-form {
+  position:relative;
+  right: -120px;
   float: right;
-  width: 235px;
-  height: 29px; 
-}
-#search input {
-  float: left;
-  border: none;
-}
-#search .input {
-  width: 188px;
-  height: 28px;
-  font: normal 100% "Verdana", sans-serif;
-  outline: none;
-  padding: 0 37px 1px 15px;
-  background: url(images/search.png) no-repeat;
-}
-#search .input:focus {
-  color: #333;
-  background-color: #E8E8E8;
-  background-position: 0 -29px;	
-}
-#search .submit {
-  margin-left: -37px;
-  width: 37px;
-  height: 29px;
-  cursor: pointer;
-  background: url(dontexist.png);
+  width: 300px;
+  height: 40px;
+  }
+ #block-search-form  input[type="search"] {
+   -webkit-appearance: none; 
+   width: 200px; 
+   height: 40px;
+   border: none; 
+   outline: none; 
+ }   
+ #block-search-form  input[type="submit"] {
+   width: 40px; 
+   height: 40px; 
+   background: url(images/searchbutton.png) no-repeat 50% 50%; 
+   border: none;
+   color: transparent; 
 }
 #content{
   position: relative;

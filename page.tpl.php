@@ -6,12 +6,7 @@
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
     <?php endif; ?>    
-    
-    <form action="" method="post" id="search">  
-      <input type="text" name="" value="CERCA" onblur="if(this.value=='') this.value='CERCA';" onfocus="if(this.value=='CERCA') this.value='';" class="input" />  
-      <input type="submit" name="" value="" class="submit" />  
-    </form> 
-   
+      
     <?php if ($page['header']): ?>
       <?php print render($page['header']); ?> 
     <?php endif; ?>      
