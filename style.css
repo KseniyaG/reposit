@@ -37,16 +37,16 @@ header ul.menu li a {
 }
 #search {
   float: right;
-	width: 235px;
-	height: 29px; 
+  width: 235px;
+  height: 29px; 
 }
 #search input {
-	float: left;
-	border: none;
+  float: left;
+  border: none;
 }
 #search .input {
-	width: 188px;
-	height: 28px;
+  width: 188px;
+  height: 28px;
   font: normal 100% "Verdana", sans-serif;
   outline: none;
   padding: 0 37px 1px 15px;
@@ -54,14 +54,14 @@ header ul.menu li a {
 }
 #search .input:focus {
   color: #333;
-	background-color: #E8E8E8;
-	background-position: 0 -29px;	
+  background-color: #E8E8E8;
+  background-position: 0 -29px;	
 }
 #search .submit {
   margin-left: -37px;
-	width: 37px;
-	height: 29px;
-	cursor: pointer;
+  width: 37px;
+  height: 29px;
+  cursor: pointer;
 	background: url(dontexist.png);
 }
 #content{
@@ -139,10 +139,10 @@ footer {
   top: 70px;
   display: block;
   float: left;
-	width: 940px;
+  width: 940px;
   height: 180px; 
   padding: 10px 15px 10px 15px;
-	background: #404040;
+  background: #404040;
 }
 footer ul.menu {
   display: inline-block;
@@ -182,10 +182,10 @@ footer ul.menu li ul li a {
   left: -15px;
   display: block;
   float: left;
-	width: 940px;
+  width: 940px;
   height: 70px; 
   padding: 0px 15px 10px 15px;
-	background: #000000;
+  background: #000000;
 }
 html, body {
   height: 100%; 
