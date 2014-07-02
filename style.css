@@ -5,11 +5,11 @@
 }
 header{
   position: relative;
-  top: 10px;
+  top: 10px; 
   display: block;
   float: right;
-  width: 960px;
-  height: 400px; 
+	width: 960px;
+  height: 90px; 
 } 
 header ul.menu {
   display: inline-block;
@@ -37,16 +37,16 @@ header ul.menu li a {
 }
 #search {
   float: right;
-  width: 235px;
-  height: 29px; 
+	width: 235px;
+	height: 29px; 
 }
 #search input {
-  float: left;
-  border: none;
+	float: left;
+	border: none;
 }
 #search .input {
-  width: 188px;
-  height: 28px;
+	width: 188px;
+	height: 28px;
   font: normal 100% "Verdana", sans-serif;
   outline: none;
   padding: 0 37px 1px 15px;
@@ -54,106 +54,112 @@ header ul.menu li a {
 }
 #search .input:focus {
   color: #333;
-  background-color: #E8E8E8;
-  background-position: 0 -29px;	
+	background-color: #E8E8E8;
+	background-position: 0 -29px;	
 }
 #search .submit {
   margin-left: -37px;
-  width: 37px;
-  height: 29px;
-  cursor: pointer;
-  background: url(dontexist.png);
+	width: 37px;
+	height: 29px;
+	cursor: pointer;
+	background: url(dontexist.png);
 }
-#slider {
+#content{
   position: relative;
-  top: 90px;
+  top: 10px;
+  display: block;
+  float: left;  
+  width: 960px;
+}
+#views_slideshow_cycle_div_slider-block_1 {
+  position: relative;
   left: 0;
   display: block;
   width: 960px;  
   height: 400px;   
 }
-#preview { 
+#block-views-table-of-articles-block { 
   position: relative;
-  top: 60px;
   display: inline-block;
   width: 970px;
   height: 270px;
   font: Verdana, sans-serif;
 }
-#content{
-  position: relative;
-  top: 20px;
-  display: block;
-  float: left;  
-  width: 960px;
-  height: 400px;
-  overflow: auto;  
-}
 #postview{
   position: relative;
-  top: 10px;
+  top: 30px;
   display: block;
   float: left;
   width: 670px;
-  height: 250px;
+  height: 900px; 
+  background: #e3e3e3;  
+}
+#block-views-contentslider-block{
+  position: relative;
+  display: block;
+  float: left;
+  width: 670px;
   font: normal 10.5pt "Verdana", sans-serif; 
   padding: 15px 15px 0 15px;  
   background: #e3e3e3;
   border: none;  
 }
-#image{  
+#block-views-logo-views-block{  
   position: relative;
-  top: -255px;
+  top: 30px;
   right: -10px;
   display: block;
   float: right;
   width: 270px;
-  height: 880px;
+  height: 900px;
   background:#c2c2c2;
   border: none;
 }
-#news{
+#block-views-newsblock-block{
  position: relative;
- top:20px;
+ top:10px;
  left: -120px;
  display: block;
- float: left;
- width: 330px; 
+ width: 337px; 
  font: Verdana, sans-serif;
  text-decoration: none;
+ padding-top: 20px;
  margin-left:120px;
+ background: #ffffff !important; 
  border-right: 2px solid #DCDCDC;
 }
-#videos{
+#block-views-video-block{
  position: relative;
- top: -611px;
+ top: -621px;
  display: block;
  float: right;
- width: 330px; 
- padding-top: 20px;
+ width: 310px; 
+ background: #ffffff !important;
+ padding-top: 15px;
+ padding-left:20px;
  margin-left: 120px;
 }
-#topfooter {
+footer {
   position: relative;
-  top: -600px;
+  top: 70px;
   display: block;
   float: left;
-  width: 940px;
+	width: 940px;
   height: 180px; 
   padding: 10px 15px 10px 15px;
-  background: #404040;
+	background: #404040;
 }
-#topfooter ul.menu {
+footer ul.menu {
   display: inline-block;
   list-style: none;
   padding:0;
   list-style: none;
 }
-#topfooter ul.menu li {
+footer ul.menu li {
   float: left;
   list-style: none;
 }
-#topfooter ul.menu li a {
+footer ul.menu li a {
   display: block;
   width: 170px;
   font: normal 12pt "Verdana", sans-serif; 
@@ -161,31 +167,30 @@ header ul.menu li a {
   text-decoration: none;
   padding: 0;
 }
-#topfooter ul.menu li ul {
+footer ul.menu li ul {
   display: none;
 }
-#topfooter ul.menu li ul {
+footer ul.menu li ul {
   position: absolute;
   display: block;   
 }
-#topfooter ul.menu li ul li {
+footer ul.menu li ul li {
   float: none;
 }
-#topfooter ul.menu li ul li a {
+footer ul.menu li ul li a {
   width: 170px;
   font-size:10pt !important; 
 } 
-footer{
- position: relative;
- top: -600px;
- display: inline;
- float: left;
- width: 940px;
- height: 65px;
- font: normal 11pt "Arial", sans-serif; 
- color: #ffffff;
- padding: 0 15px 10px 15px;
- background: #000000; 
+#block-views-address-block{
+  position: relative;
+  top: 120px;
+  left: -15px;
+  display: block;
+  float: left;
+	width: 940px;
+  height: 70px; 
+  padding: 0px 15px 10px 15px;
+	background: #000000;
 }
 html, body {
   height: 100%; 
@@ -195,10 +200,8 @@ html, body {
   display: table; 
   width: 100%;
 }
-html>
-body #page { height: 100%; }
+html>/**/body #page { height: 100%; }
 *:first-child+html #page { height: auto; }
 .section { display: table-row; }
-html>
-body .section-content { height: 100%; }
+html>/**/body .section-content { height: 100%; }
 *:first-child+html body .section-content { height: auto; }

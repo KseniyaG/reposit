@@ -5,61 +5,30 @@
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
-    <?php endif; ?> 
-    <?php if ($page['search_form']): ?>    
-      <form action="" method="post" id="search">  
-        <input type="text" name="" value="CERCA" onblur="if(this.value=='') this.value='CERCA';" onfocus="if(this.value=='CERCA') this.value='';" class="input" />  
-        <input type="submit" name="" value="" class="submit" />  
-      </form> 
-    <?php endif?>  
-    <?php if ($page['header']): ?>
-      <?php print render($page['header']); ?> 
-    <?php endif; ?>      
-  </header>             
-         
-  <?php if ($page['search_form']): ?>    
+    <?php endif; ?>    
+    
     <form action="" method="post" id="search">  
       <input type="text" name="" value="CERCA" onblur="if(this.value=='') this.value='CERCA';" onfocus="if(this.value=='CERCA') this.value='';" class="input" />  
       <input type="submit" name="" value="" class="submit" />  
     </form> 
-  <?php endif?>  
-        
-  <div id="logo"> 
-    <a href="/"><img src="\sites\all\themes\my_theme\logo.jpg" alt="" height="" width="" /></a>
-  </div>
-         
-  <div id="slider">
-    <?php print render($page['miniature']);?>  
-  </div>
-         
-  <div id="preview">
-    <?php print render($page['preview']);?> 
-  </div>
-         
+   
+    <?php if ($page['header']): ?>
+      <?php print render($page['header']); ?> 
+    <?php endif; ?>      
+  </header>   
+  
   <div id="content">
     <?php print render($page['content']);?> 
   </div>
-        
+    
   <div id="postview">
     <?php print render($page['postview']);?> 
   </div>
-     
+    
   <div id="image">
     <?php print render($page['image']);?> 
   </div>
-        
-  <div id="news">
-    <?php print render($page['sidebar_first']);?> 
-  </div>
-        
-  <div id="videos">
-    <?php print render($page['sidebar_second']);?> 
-  </div>
-       
-  <div id = "topfooter"> 
-    <?php print render($page['top_footer']);?>    
-  </div> 
-        
+      
   <footer id="footer">
     <?php print render($page['footer']); ?>             
   </footer>

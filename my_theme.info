@@ -5,15 +5,9 @@ core = 7.x
 ;REGIONS
 ;-----------------------
 regions[header] = Header
-regions[search_form] = Search form
-regions[miniature] = Miniature
-regions[preview] = Preview
 regions[content] = Content
 regions[postview] = Postview
 regions[image] = Image
-regions[sidebar_first] = Sidebar First
-regions[sidebar_second] = Sidebar Second
-regions[top_footer] = Top Footer
 regions[footer] = Footer
 ;STYLESHEETS
 ;-----------------------
