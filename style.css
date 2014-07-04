@@ -1,0 +1,283 @@
+#page_wrapper {
+  max-width: 1024px;
+  color: #4a4a4a;
+  margin: 0 auto;
+}
+header{
+  position: relative;
+  display: block;
+  float: right;
+  width: 960px;
+  height: 85px;
+  padding:0 15px 0 0;
+
+} 
+header ul.menu {
+  position: relative;
+  display: inline-block;
+  float: right;
+  width: 560px;
+  height: 40px;
+  list-style: none;
+  padding:0 10px 0 0;
+  margin: 0;
+  background-color: #1a1a1a;
+  border-radius: 5px 5px 0 0;
+}
+header ul.menu li {
+  float: left;
+  list-style: none;
+  border-right:2px solid #242424;
+}
+header ul.menu li a {
+  display: block;
+  width: 94px;
+  font: bolder 10pt "Verdana", sans-serif;
+  color: #d4d4d4;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0 10px 0;
+}
+#block-locale-language{
+  position: relative;
+  display: block;
+  float: right;
+  list-style: none;
+}
+#block-locale-language ul{
+  list-style: none;
+}
+#block-locale-language ul li{
+display: inline-block;
+  list-style: none;
+}
+#block-locale-language ul li a{
+  float: left;
+  width: 15px;
+  height: 15px;
+  list-style: none;
+  text-decoration: none;
+  color: #e6ffeb;
+  background-color: #017321;
+  font: 800 8pt "Verdana", sans-serif;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+}
+#block-locale-language ul li a.active{
+  float:right;
+  width: 15px;
+  height: 15px;
+  list-style: none;
+  text-decoration: none;
+  color: #e6ffeb;
+  font: 800 8pt "Verdana", sans-serif;
+  background-color: #3d3d3d;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+}
+#logo{
+  position: relative;
+  display: block;
+  float: left;
+}
+#content{
+  position: relative;
+  display: block;
+  float: left;  
+  width: 1068px;
+}
+#block-views-slider-block{
+  position: relative;
+  display: block;
+  float: left;  
+  height: 300px;
+  padding: 0 59px 30px 59px;
+  background:url(images/back.jpg) repeat;
+}
+#block-views-slider-block img {
+  border-radius: 0 0 10px 10px;
+}
+#block-views-table-of-articles-block {
+  position: relative;
+  display: inline-block;
+  float: left;  
+  width: 950px;
+  height: 300px;
+  padding: 10px 59px 10px 49px;
+}
+#block-views-table-of-articles-block  img {
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#block-views-table-of-articles-block  :link ,
+#block-views-table-of-articles-block  :visited{
+  float:right;
+  color: #e6ffeb;
+  font: 800 8pt "Verdana", sans-serif;
+  text-decoration: none;
+  background-color: #017321;
+  padding: 5px 7px 5px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+#block-views-table-of-articles-block  .views-field.views-field-title{
+  color: #017321;
+  font: 800 12pt "Verdana", sans-serif;
+  padding-left: 10px;
+}
+#block-views-table-of-articles-block  .views-field.views-field-field-tags {
+  font: normal 9pt "Verdana", sans-serif;
+  padding: 5px 10px 10px 10px;
+}
+#left_column{
+  position: relative;
+  display: block;
+  float: left; 
+  width: 470px;
+  height: 500px;
+  padding: 10px 20px 0 0;
+  margin-left: 50px;
+  background:url(images/back.jpg) repeat;
+}
+#block-views-market-block  .views-row.views-row-1{
+  position: relative;
+  display: block;
+  float: left; 
+  width: 465px;
+  height: 227px;
+  margin: 25px 10px 10px 0;
+  background:url(images/market1.jpg) no-repeat;
+  border-radius: 10px;
+}
+#block-views-market-block .views-field.views-field-title{
+  margin-top: 150px; 
+}
+#block-views-market-block  .views-row.views-row-2{
+  position: relative;
+  display: block;
+  float: left; 
+  width: 465px;
+  height: 155px;
+  margin: 10px 10px 10px 0;
+  background:url(images/market2.jpg) no-repeat;
+  border-radius: 10px;
+}
+#block-views-market-block img{
+  border-radius: 20px;
+  padding: 10px;
+  z-index: 1;
+}
+#block-views-market-block :link,
+#block-views-market-block :visited{ 
+  width: 110px;
+  color: #e6ffeb;
+  font: 800 8pt "Verdana", sans-serif;
+  text-decoration: none;
+  background-color: #017321;
+  padding: 5px 7px 5px 15px;
+  margin-left: 40px;
+  border-radius: 5px;
+  z-index:2;
+}
+#right_column{
+  position: relative;
+  display: block;
+  float: right; 
+  width: 480px;
+  height: 500px;
+  padding: 10px 0 0 0;
+  background:url(images/back.jpg) repeat;
+}
+#block-views-newsblock-block{
+  float:right;
+  width: 230px;
+}
+#block-views-newsblock-block :link,
+#block-views-newsblock-block :visited{
+  color: #017321;
+  font: 800 11pt "Verdana", sans-serif;
+  text-decoration: none;
+  padding-left: 5px;
+}
+#block-views-newsblock-block .views-field.views-field-created{
+  color: #000103;
+  font: 800 8pt "Verdana", sans-serif;
+  padding-left: 5px;
+}
+#block-views-newsblock-block .views-field.views-field-body p{
+  margin-top: 0 !important;
+}
+#block-views-videoblock-block{
+  float:left;
+  width: 230px;
+}
+#block-views-videoblock-block .views-field.views-field-body p{
+  margin: 0 !important;
+}
+footer{
+  position: relative;
+  display: inline;
+  float: left;
+  width: 1024px;
+  height: 250px;
+  padding:0 0 0 0;
+  margin-left: 25px;
+  background-color: #0f0f0f;
+} 
+#block-menu-menu-tutte-le-collezione{
+  display: block;
+  float: left;
+  width: 300px;
+  height: 200px;
+}
+#block-menu-menu-second-footer-menu{
+  display: block;
+  float: left;
+  width: 200px;
+  height: 120px;
+}
+#block-menu-menu-third-footer-menu{
+  top:140px;
+  left: -200px;
+  display: block;
+  float: left;
+  width: 200px;
+  height: 70px;
+}
+#block-menu-menu-tutte-le-collezione ul.menu,
+#block-menu-menu-second-footer-menu ul.menu ,
+#block-menu-menu-third-footer-menu ul.menu {
+  list-style: none;
+}
+#block-menu-menu-tutte-le-collezione ul.menu li ,
+#block-menu-menu-second-footer-menu ul.menu li, 
+#block-menu-menu-third-footer-menu ul.menu li {
+  list-style: none;
+}
+#block-menu-menu-tutte-le-collezione ul.menu li a ,
+#block-menu-menu-second-footer-menu ul.menu li a,
+#block-menu-menu-third-footer-menu ul.menu li a{
+  font: 700 10pt "Verdana", sans-serif;
+  color: #d4d4d4;
+  text-decoration: none;
+}
+#block-views-view-of-links-block{
+  display: block;
+  float: right;
+  width: 200px;
+  height: 60px;
+  padding-right: 35px;
+}
+#block-views-view-of-links-block img{
+  border-radius: 5px;
+}
+#block-views-address-block{
+  top: 140px;
+  display: block;
+  float: right;
+  width: 400px;
+  height: 30px;
+  font: normal 8pt "Verdana", sans-serif;
+  color: #d4d4d4;
+}

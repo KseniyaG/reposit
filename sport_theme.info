@@ -1,0 +1,14 @@
+;$id$
+name = Sport theme
+description = Sport theme with different contents
+core = 7.x
+;REGIONS
+;-----------------------
+regions[header] = Header
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[footer] = Footer
+;STYLESHEETS
+;-----------------------
+stylesheets[all][] = style.css
