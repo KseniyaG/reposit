@@ -48,7 +48,7 @@ header ul.menu li a {
   list-style: none;
 }
 #block-locale-language ul li{
-display: inline-block;
+  display: inline-block;
   list-style: none;
 }
 #block-locale-language ul li a{
