@@ -1,5 +1,6 @@
 #page_wrapper {
-  max-width: 100%;
+  min-width: 1359px;
+  max-width:1359px;
   color: #4a4a4a;
   margin: 0 auto;
 }
@@ -7,8 +8,7 @@ header{
   position: relative;
   display: block;
   float: left;
-  width: 100%;
-  height: 117px;
+  width: 1359px;
   padding:0;
   margin: 0;
   box-shadow: 0 0 15px 0;
@@ -16,13 +16,13 @@ header{
 } 
 header ul.menu {
   position: relative;
+  top: 17px;
   display: inline-block;
   float: right;
   width: 560px;
-  height: 40px;
   list-style: none;
   padding:0 5px 0 0;
-  margin-right: 200px;
+  margin-right: 225px;
   background-color: #1a1a1a;
   border-radius: 5px 5px 0 0;
 }
@@ -89,7 +89,7 @@ header ul.menu li a {
   position: relative;
   display: block;
   float: left;  
-  width: 100%;
+  width: 1359px;
   padding: 0;
   margin-left: 114px;
   z-index: 1;
@@ -98,7 +98,6 @@ header ul.menu li a {
   position: relative;
   display: block;
   float: left;  
-  height: 300px;
   padding: 0 59px 30px 59px;
   margin: 0;
   background:url(images/back.jpg) repeat;
@@ -111,7 +110,6 @@ header ul.menu li a {
   display: inline-block;
   float: left;  
   width: 950px;
-  height: 300px;
   padding: 10px 59px 10px 49px;
 }
 #block-views-table-of-articles-block  img {
@@ -228,8 +226,7 @@ footer{
   position: relative;
   display: inline;
   float: left;
-  width: 100%;
-  height: 250px;
+  width: 1359px;
   padding: 0;
   background-color: #0f0f0f;
 } 
@@ -238,7 +235,6 @@ footer{
   display: block;
   float: right;
   width: 200px;
-  height: 60px;
   padding-right: 35px;
   margin-right: 150px;
   z-index: 2;
@@ -251,7 +247,6 @@ footer{
   display: block;
   float: right;
   width: 400px;
-  height: 40px;
   font: normal 8pt "Verdana", sans-serif;
   color: #d4d4d4;
   z-index: 1;
@@ -260,14 +255,12 @@ footer{
   display: block;
   float: left;
   width: 300px;
-  height: 200px;
   margin-left: 125px;
 }
 #block-menu-menu-second-footer-menu{
   display: block;
   float: right;
   width: 200px;
-  height: 120px;
   margin-right: 700px;
 }
 #block-menu-menu-third-footer-menu{
@@ -276,7 +269,6 @@ footer{
   display: block;
   float: right;
   width: 200px;
-  height: 70px;
   margin-right: 700px;
 }
 #block-menu-menu-tutte-le-collezione ul.menu,
