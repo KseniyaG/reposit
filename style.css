@@ -1,16 +1,18 @@
 #page_wrapper {
-  max-width: 1024px;
+  max-width: 100%;
   color: #4a4a4a;
   margin: 0 auto;
 }
 header{
   position: relative;
   display: block;
-  float: right;
-  width: 960px;
-  height: 85px;
-  padding:0 15px 0 0;
-
+  float: left;
+  width: 100%;
+  height: 117px;
+  padding:0;
+  margin: 0;
+  box-shadow: 0 0 15px 0;
+  z-index: 2;
 } 
 header ul.menu {
   position: relative;
@@ -19,8 +21,8 @@ header ul.menu {
   width: 560px;
   height: 40px;
   list-style: none;
-  padding:0 10px 0 0;
-  margin: 0;
+  padding:0 5px 0 0;
+  margin-right: 200px;
   background-color: #1a1a1a;
   border-radius: 5px 5px 0 0;
 }
@@ -42,7 +44,9 @@ header ul.menu li a {
   position: relative;
   display: block;
   float: right;
+  width: 300px;
   list-style: none;
+  padding-left: 250px;
 }
 #block-locale-language ul{
   list-style: none;
@@ -79,12 +83,16 @@ header ul.menu li a {
   position: relative;
   display: block;
   float: left;
+  padding-left: 145px;
 }
 #content{
   position: relative;
   display: block;
   float: left;  
-  width: 1068px;
+  width: 100%;
+  padding: 0;
+  margin-left: 114px;
+  z-index: 1;
 }
 #block-views-slider-block{
   position: relative;
@@ -92,6 +100,7 @@ header ul.menu li a {
   float: left;  
   height: 300px;
   padding: 0 59px 30px 59px;
+  margin: 0;
   background:url(images/back.jpg) repeat;
 }
 #block-views-slider-block img {
@@ -110,7 +119,7 @@ header ul.menu li a {
   padding: 10px;
 }
 
-#block-views-table-of-articles-block  :link ,
+#block-views-table-of-articles-block  :link,
 #block-views-table-of-articles-block  :visited{
   float:right;
   color: #e6ffeb;
@@ -134,10 +143,9 @@ header ul.menu li a {
   position: relative;
   display: block;
   float: left; 
-  width: 470px;
+  width: 50%;
   height: 500px;
-  padding: 10px 20px 0 0;
-  margin-left: 50px;
+  padding:0;
   background:url(images/back.jpg) repeat;
 }
 #block-views-market-block  .views-row.views-row-1{
@@ -146,7 +154,7 @@ header ul.menu li a {
   float: left; 
   width: 465px;
   height: 227px;
-  margin: 25px 10px 10px 0;
+  margin: 25px 10px 10px 174px;
   background:url(images/market1.jpg) no-repeat;
   border-radius: 10px;
 }
@@ -159,7 +167,7 @@ header ul.menu li a {
   float: left; 
   width: 465px;
   height: 155px;
-  margin: 10px 10px 10px 0;
+  margin: 10px 10px 10px 174px;
   background:url(images/market2.jpg) no-repeat;
   border-radius: 10px;
 }
@@ -184,14 +192,15 @@ header ul.menu li a {
   position: relative;
   display: block;
   float: right; 
-  width: 480px;
+  width: 50%;
   height: 500px;
-  padding: 10px 0 0 0;
+  padding: 0;
   background:url(images/back.jpg) repeat;
 }
 #block-views-newsblock-block{
   float:right;
   width: 230px;
+  padding-right: 180px;
 }
 #block-views-newsblock-block :link,
 #block-views-newsblock-block :visited{
@@ -219,10 +228,9 @@ footer{
   position: relative;
   display: inline;
   float: left;
-  width: 1024px;
+  width: 100%;
   height: 250px;
-  padding:0 0 0 0;
-  margin-left: 25px;
+  padding: 0;
   background-color: #0f0f0f;
 } 
 #block-menu-menu-tutte-le-collezione{
@@ -230,6 +238,7 @@ footer{
   float: left;
   width: 300px;
   height: 200px;
+  margin-left: 125px;
 }
 #block-menu-menu-second-footer-menu{
   display: block;
@@ -280,4 +289,30 @@ footer{
   height: 30px;
   font: normal 8pt "Verdana", sans-serif;
   color: #d4d4d4;
+}
+.views-slideshow-pager-field-item {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+}
+.views-field-nid img {
+  width: 16px;
+  height: 16px;
+}
+.views-field-nid {
+  cursor: pointer;
+  background-image: url(images/tochka.png);
+  background-repeat: no-repeat;
+  background-position: 0px -44px;
+}
+.views-field-nid :hover{
+  cursor: pointer;
+  background-image: url(images/tochka.png);
+  background-repeat: no-repeat;
+  background-position: 0px -5px;
+}
+.views-slideshow-pager-fields {
+  float: left;
+  margin-left: 430px;
+  color:transparent;
 }
